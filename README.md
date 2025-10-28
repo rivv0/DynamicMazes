@@ -48,41 +48,6 @@ npm start
 - **Objective**: Navigate from the green start cell to the orange end cell
 - **Timer**: The maze regenerates every 15 seconds
 
-## Deployment
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-This creates a `build` folder with optimized production files.
-
-### Deploy to Netlify
-
-1. Build the project: `npm run build`
-2. Drag and drop the `build` folder to [Netlify Drop](https://app.netlify.com/drop)
-
-### Deploy to Vercel
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel`
-3. Follow the prompts
-
-### Deploy to GitHub Pages
-
-1. Install gh-pages: `npm install --save-dev gh-pages`
-2. Add to package.json:
-```json
-{
-  "homepage": "https://yourusername.github.io/react-maze-game",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  }
-}
-```
-3. Deploy: `npm run deploy`
 
 ## Project Structure
 
