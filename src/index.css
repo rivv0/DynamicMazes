@@ -17,10 +17,6 @@ body {
 }
 
 .game-container {
-  background-image: url('./assets/amazedmid.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: fixed;
   top: 0;
   left: 0;
@@ -30,6 +26,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Reduced overlay to show more of the Perlin noise */
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .page-container {
@@ -47,14 +45,16 @@ body {
   display: grid;
   place-items: center;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 20px rgba(0, 255, 0, 0.3);
+  backdrop-filter: blur(3px);
+  /* Reduced blur to show more background */
 }
 
 /* Timer Styles */
 .timer-container {
-  background-color: rgba(35, 33, 33, 0.66);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 10px;
   position: fixed;
@@ -63,6 +63,8 @@ body {
   color: white;
   text-align: center;
   z-index: 5;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 0, 0.3);
 }
 
 .timer-text {

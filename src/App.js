@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import MazeGame from './components/MazeGame';
 import IntroVideo from './components/IntroVideo';
+import PerlinBackground from './components/PerlinBackground';
 import './App.css';
 
 const INTERVAL = 15000; // 15 seconds
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <PerlinBackground />
       <div className="game-container"></div>
       {showIntro ? (
         <IntroVideo onVideoEnd={handleVideoEnd} />
