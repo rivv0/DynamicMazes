@@ -1,0 +1,62 @@
+.success-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-modal {
+  background-color: #1f2937;
+  border: 2px solid #00FF00;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 384px;
+  width: 100%;
+  margin: 0 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.success-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00FF00;
+  margin-bottom: 16px;
+}
+
+.success-message {
+  color: #4ade80;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+}
+
+.success-points {
+  color: #4ade80;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.play-again-button {
+  background-color: #00FF00;
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.play-again-button:hover {
+  background-color: #00cc00;
+  transform: scale(1.05);
+}

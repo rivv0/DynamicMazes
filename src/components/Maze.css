@@ -1,0 +1,128 @@
+/* Maze Container */
+.maze-container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  width: min(90vw, 90vh);
+  height: min(90vw, 90vh);
+  background: #333333;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Individual Maze Cells */
+.maze-cell {
+  aspect-ratio: 1 / 1; 
+  position: relative;
+  background: #212121;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+/* Wall Styles */
+.wall-north,
+.wall-south,
+.wall-east,
+.wall-west {
+  position: absolute;
+  background: #00FF00;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.wall-north {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.wall-south {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.wall-east {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+.wall-west {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+/* Wall Hidden (opacity control) */
+.wall-hidden {
+  opacity: 0;
+}
+
+/* Start and End Cells */
+.start-cell {
+  background-color: #00FF00;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
+}
+
+.end-cell {
+  background-color: #FF5722;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
+}
+
+/* Boundary Walls */
+.boundary-wall {
+  background-color: #FFEB3B;
+  opacity: 1 !important;
+}
+
+/* Moving Object Cell */
+.object-cell {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.object {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background: #FFD700;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+  animation: objectPulse 1.5s ease-in-out infinite;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect for Cells */
+.maze-cell:hover {
+  background-color: #424242;
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+@keyframes objectPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
